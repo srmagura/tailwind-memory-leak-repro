@@ -1,7 +1,8 @@
 {
   "name": "tailwind-memory-leak-repro",
   "scripts": {
-    "start": "webpack --watch"
+    "start": "webpack --watch",
+    "spam-rebuild": "node scripts/spam-rebuild.cjs"
   },
   "dependencies": {
     "css-loader": "^6.7.3",
