@@ -1,7 +1,7 @@
 const fs = require("fs/promises");
 const path = require("path");
 
-const DELAY = 500;
+const DELAY = 250;
 
 async function runAsync() {
   const thePath = path.resolve(__dirname, "../src/main.js");
@@ -9,7 +9,7 @@ async function runAsync() {
   for (i = 0; true; i++) {
     let js = await fs.readFile(thePath, { encoding: "utf-8" });
 
-    js += `// blah`;
+    js += `//`;
 
     await fs.writeFile(thePath, js, { encoding: "utf-8" });
     console.log(i);
